@@ -1,0 +1,4 @@
+# UI-only deps for the Streamlit apps (studio.py and tournament_viewer.py).
+# The core engine comes from `pip install -e .` (the coscientist package).
+streamlit>=1.46.1
+st-cytoscape>=0.0.5

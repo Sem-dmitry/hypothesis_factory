@@ -1,0 +1,27 @@
+jinja2>=3.1.2
+networkx>=3.5
+scikit-learn>=1.7.0
+numpy>=1.24.0,<2.3
+typing-extensions>=4.5.0
+# Core LLM/embedding access is routed through RouterAI / an API-based
+# embedding via langchain-openai's OpenAI-compatible client (see model_factory.py).
+langchain-core>=0.3.65
+langchain-openai>=0.3.18
+langgraph>=0.4.7
+# Private-corpus ingestion (Phase 2): PDF / DOCX / XLSX loaders.
+pymupdf>=1.24.0
+python-docx>=1.1.0
+openpyxl>=3.1.0
+# Export (Phase 4): PDF/DOCX reports + Markdown.
+reportlab>=4.0.0
+markdown>=3.5
+# Deep-mode web research (literature review + reflection) via RouterAI
+# web-search (see coscientist/web_search.py); needs only ROUTER_AI_API_KEY.
+# Optional: only used in deep mode with web research enabled. 0.15+ is compatible
+# with langchain 0.3 (the older git@v3.3.0 imports the removed langchain.docstore).
+gpt-researcher>=0.15.1
+langchain>=0.3.25
+# Web UI (webapp/): FastAPI + uvicorn server serving a self-contained SPA.
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9
